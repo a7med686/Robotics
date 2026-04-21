@@ -9,10 +9,11 @@ computer browser — no apps required!
 ---
 
 ## ✨ Features
-- 📡 Live video streaming over Wi-Fi
-- 🎮 Web-based motor control (Forward, Backward, Left, Right, Stop)
-- 📱 Works on phone or PC browser
-- 💰 Low-cost ESP32-CAM module
+- Stream live via Wi-Fi
+- Web-based motor control interface (Forward, Backward, Left, Right, Stop)
+- Built with ESP32-CAM (low-cost, compact module)
+- Uses L298N motor driver
+- Control and view from any device on the same network
 
 ---
 
@@ -40,7 +41,7 @@ computer browser — no apps required!
 | GND | GND |
 | U0R | TX |
 | U0T | RX |
-| GPIO0 | GND |
+| IO0 ↔ GND |
 
 ---
 
@@ -52,13 +53,14 @@ computer browser — no apps required!
 | GPIO13 | IN2 |
 | GPIO15 | IN3 |
 | GPIO14 | IN4 |
+| 5V | 5V |
+| GND | GND |
 
 ---
 
 ### Power
-- ESP32 powered by 5V
-- Motor Driver powered by 6–12V battery
-- Shared GND required
+- ESP32-CAM powered via FTDI (for programming) and 5V regulator or battery
+- Motor Driver powered by separate battery (6–12V)
 
 ---
 
