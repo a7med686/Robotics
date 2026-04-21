@@ -47,7 +47,7 @@ computer browser — no apps required!
 
 ---
 
-### ESP32-CAM ↔ Motor Driver
+### Motor Driver, ESP32 CAM and Battery Wire Connection Diagram:
 
 <img width="900" height="528" alt="image" src="https://github.com/user-attachments/assets/d4574ff0-b0b8-4bce-97a2-7c1c1c43f2ec" />
 
