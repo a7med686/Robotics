@@ -49,6 +49,9 @@ computer browser — no apps required!
 
 ### ESP32-CAM ↔ Motor Driver
 
+<img width="900" height="528" alt="image" src="https://github.com/user-attachments/assets/d4574ff0-b0b8-4bce-97a2-7c1c1c43f2ec" />
+
+
 | ESP32 | L298N |
 |------|------|
 | GPIO12 | IN1 |
