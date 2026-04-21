@@ -18,7 +18,6 @@ computer browser — no apps required!
 ---
 
 ## 🧰 Components Required
-<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/451fd832-9396-4dc1-a05b-df5c3f166079" />
 
 | Component | Quantity |
 |----------|--------|
@@ -35,6 +34,7 @@ computer browser — no apps required!
 ## 🔌 Wiring Connections
 
 ### ESP32-CAM ↔ FTDI
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/f0b48141-a5ef-4948-9309-027f20018b4c" />
 
 | ESP32 | FTDI |
 |------|------|
