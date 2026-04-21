@@ -68,14 +68,16 @@ computer browser — no apps required!
 
 ### Install ESP32 Board
 1. Install ESP32 Board Support in Arduino IDE
-- Go to File > Preferences → Paste these URLs in “Additional Board URLs”:
- 1- https://dl.espressif.com/dl/package_esp32_index.json
-2- https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-
-### Board Settings
-- Board: AI Thinker ESP32-CAM
-- Partition Scheme: Default
-- PSRAM: Enabled
+    - Go to File > Preferences → Paste these URLs in “Additional Board URLs”:
+  
+       1. https://dl.espressif.com/dl/package_esp32_index.json
+       2. https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+   
+    - Go to Tools > Board > Board Manager → Search “ESP32” → Install
+  2. Select:
+     - Board: AI Thinker ESP32-CAM
+     - Partition Scheme: Default 4MB with SPIFFS
+     - PSRAM: Enabled (if available)
 
 ---
 
@@ -91,20 +93,24 @@ computer browser — no apps required!
 ---
 
 ## 🌐 How It Works
-- ESP32 hosts:
-  - Stream → http://IP:81/stream
-  - Control → http://IP
-- Browser buttons send commands to ESP32
-- ESP32 controls motors using GPIO pins
+- The ESP32-CAM hosts a video stream at:http://< 10.167.98.199 >:81/stream
+- It also hosts a control UI at: http://< 10.167.98.199 > with motor buttons
+- Clicking the buttons sends HTTP requests (/control?move=F, etc.)
+- ESP32 processes these to control motors via GPIO 12–15
 
 ---
 
 ## 📱 Usage
 1. Upload code using FTDI
-2. Power the car
-3. Open Serial Monitor (115200)
-4. Get IP address
-5. Open browser
+2. Power the car (ESP32 and motor driver)
+3. Open Serial Monitor at 115200 → Get IP
+4. Open browser on phone or PC:
+     - Stream page: http://< 10.167.98.199>:81/stream
+     - Control page: http://< 10.167.98.199>
+- Add screenshots of:
+  - Serial monitor showing IP
+  - Web UI on phone
+  - Camera stream output
 
 ---
 
@@ -128,15 +134,7 @@ computer browser — no apps required!
 ---
 
 ## 🏁 Conclusion
-This project combines robotics, streaming, and IoT using ESP32-CAM.
-
-1. Upload code using FTDI
-2. Power the car (ESP32 and motor driver)
-3. Open Serial Monitor at 115200 → Get IP
-4. Open browser on phone or PC:
-• Stream page: http://< 10.167.98.199>:81/stream
-• Control page: http://< 10.167.98.199>
-Add screenshots of:
-• Serial monitor showing IP
-• Web UI on phone
-• Camera stream output
+Conclusion
+This surveillance car is a fun and powerful IoT project that combines video
+streaming, robotics, and web technology — all running on a single ESP32-
+CAM!t
