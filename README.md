@@ -88,27 +88,91 @@ computer browser — no apps required!
 
 ## 💻 Code
 
-```cpp
-#include <WebServer.h>
+💻 Code Preview
+
+// Motor Pins
+#define IN1 12
+#define IN2 13
+#define IN3 15
+#define IN4 14
+
+// Basic movement
+void moveForward() {
+  digitalWrite(IN1,1);
+  digitalWrite(IN2,0);
+}
+
+---
+
+<details>
+<summary>🔽 Show Full ESP32-CAM Code</summary>#include <WebServer.h>
 #include <WiFi.h>
 #include "esp_camera.h"
 
-// ─── WiFi Configuration ─────────────────────────────────
+// WiFi
 const char* ssid     = "YOUR_SSID";
 const char* password = "YOUR_PASSWORD";
 
-// ─── Camera Pin Map (AI-Thinker ESP32-CAM) ──────────────
+// Camera Pins
 #define PWDN_GPIO_NUM     32
 #define RESET_GPIO_NUM    -1
 #define XCLK_GPIO_NUM      0
 #define SIOD_GPIO_NUM     26
 #define SIOC_GPIO_NUM     27
-#define Y9_GPIO_NUM       35
-#define Y8_GPIO_NUM       34
-#define Y7_GPIO_NUM       39
-#define Y6_GPIO_NUM       36
 
-```
+// Motor Pins
+#define IN1 12
+#define IN2 13
+#define IN3 15
+#define IN4 14
+
+WebServer controlServer(80);
+WebServer streamServer(81);
+
+// Camera Init
+void startCamera() {
+  camera_config_t config;
+  config.xclk_freq_hz = 20000000;
+  config.pixel_format = PIXFORMAT_JPEG;
+
+  if (psramFound()) {
+    config.frame_size = FRAMESIZE_VGA;
+  } else {
+    config.frame_size = FRAMESIZE_QVGA;
+  }
+
+  esp_camera_init(&config);
+}
+
+// Motor Control
+void moveForward()   { digitalWrite(IN1,1); digitalWrite(IN2,0); digitalWrite(IN3,1); digitalWrite(IN4,0); }
+void moveBackward()  { digitalWrite(IN1,0); digitalWrite(IN2,1); digitalWrite(IN3,0); digitalWrite(IN4,1); }
+void turnLeft()      { digitalWrite(IN1,0); digitalWrite(IN2,1); digitalWrite(IN3,1); digitalWrite(IN4,0); }
+void turnRight()     { digitalWrite(IN1,1); digitalWrite(IN2,0); digitalWrite(IN3,0); digitalWrite(IN4,1); }
+void stopMotors()    { digitalWrite(IN1,0); digitalWrite(IN2,0); digitalWrite(IN3,0); digitalWrite(IN4,0); }
+
+// Setup
+void setup() {
+  Serial.begin(115200);
+
+  pinMode(IN1, OUTPUT); pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT); pinMode(IN4, OUTPUT);
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) delay(500);
+
+  startCamera();
+
+  controlServer.begin();
+}
+
+// Loop
+void loop() {
+  controlServer.handleClient();
+}
+
+</details>
+// باقي الكود...
 
 ---
 
