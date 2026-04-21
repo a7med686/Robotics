@@ -18,6 +18,7 @@ computer browser — no apps required!
 ---
 
 ## 🧰 Components Required
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/451fd832-9396-4dc1-a05b-df5c3f166079" />
 
 | Component | Quantity |
 |----------|--------|
