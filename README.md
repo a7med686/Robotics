@@ -43,7 +43,7 @@ computer browser — no apps required!
 | GND | GND |
 | U0R | TX |
 | U0T | RX |
-| IO0 ↔ GND |
+| 100 ↔ GND |
 
 ---
 
