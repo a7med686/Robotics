@@ -1,9 +1,9 @@
 # 🚗 ESP32-CAM Surveillance Car with Live Video Streaming
 
 ## 📌 Overview
--In this project, you’ll learn how to build a Wi-Fi-controlled surveillance
+- In this project, you’ll learn how to build a Wi-Fi-controlled surveillance
 car using the ESP32-CAM module.
--It streams live and can be controlled remotely from any smartphone or
+- It streams live and can be controlled remotely from any smartphone or
 computer browser — no apps required!
 
 ---
