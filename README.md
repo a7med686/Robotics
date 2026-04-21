@@ -127,9 +127,10 @@ computer browser — no apps required!
 
 ## 🚀 Improvements
 - Add PWM speed control
-- Add ultrasonic sensor
-- Voice control
-- Save images to SD card
+- Add obstacle avoidance using ultrasonic sensors
+- Add voice command control via browser
+- Record stream to SD card or capture photos
+- Turn this into a security patrol robot
 
 ---
 
