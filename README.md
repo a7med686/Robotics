@@ -33,7 +33,8 @@ computer browser — no apps required!
 
 ## 🔌 Wiring Connections
 
-### ESP32-CAM ↔ FTDI
+### ESP32-CAM And FTDI Wire Connections Diagram: 
+
 <img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/f0b48141-a5ef-4948-9309-027f20018b4c" />
 
 | ESP32 | FTDI |
