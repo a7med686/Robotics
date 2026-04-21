@@ -126,3 +126,14 @@ Then install ESP32 from Board Manager.
 
 ## 🏁 Conclusion
 This project combines robotics, streaming, and IoT using ESP32-CAM.
+
+1. Upload code using FTDI
+2. Power the car (ESP32 and motor driver)
+3. Open Serial Monitor at 115200 → Get IP
+4. Open browser on phone or PC:
+• Stream page: http://< 10.167.98.199>:81/stream
+• Control page: http://< 10.167.98.199>
+Add screenshots of:
+• Serial monitor showing IP
+• Web UI on phone
+• Camera stream output
