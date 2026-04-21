@@ -88,6 +88,7 @@ computer browser — no apps required!
 
 ## 💻 Code
 ### ⚠️ Important
+
 - The full source code is available in the project files.
 - Don’t forget to update your WiFi credentials ("SSID" & "PASSWORD").
 
@@ -124,8 +125,8 @@ const char* password = "YOUR_PASSWORD";
 2. Power the car (ESP32 and motor driver)
 3. Open Serial Monitor at 115200 → Get IP
 4. Open browser on phone or PC:
-     - Stream page: http://< 10.167.98.199>:81/stream
-     - Control page: http://< 10.167.98.199>
+     - Stream page: http://10.167.98.199:81/stream
+     - Control page: http://10.167.98.199
 - Add screenshots of:
   - Serial monitor showing IP
   - Web UI on phone
