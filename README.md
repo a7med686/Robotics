@@ -131,7 +131,6 @@ const char* password = "YOUR_PASSWORD";
   - Serial monitor showing IP
   - Web UI on phone
   - Camera stream output
-<img width="498" height="492" alt="AnthonyEdwardsAnthonyEdwardsCookGIF" src="https://github.com/user-attachments/assets/f51d4c32-6938-4ed1-93b2-9081b1a6ab5c" />
 
 ---
 
