@@ -89,10 +89,25 @@ computer browser — no apps required!
 ## 💻 Code
 
 ```cpp
-#define IN1 12
-#define IN2 13
-#define IN3 15
-#define IN4 14
+#include <WebServer.h>
+#include <WiFi.h>
+#include "esp_camera.h"
+
+// ─── WiFi Configuration ─────────────────────────────────
+const char* ssid     = "YOUR_SSID";
+const char* password = "YOUR_PASSWORD";
+
+// ─── Camera Pin Map (AI-Thinker ESP32-CAM) ──────────────
+#define PWDN_GPIO_NUM     32
+#define RESET_GPIO_NUM    -1
+#define XCLK_GPIO_NUM      0
+#define SIOD_GPIO_NUM     26
+#define SIOC_GPIO_NUM     27
+#define Y9_GPIO_NUM       35
+#define Y8_GPIO_NUM       34
+#define Y7_GPIO_NUM       39
+#define Y6_GPIO_NUM       36
+
 ```
 
 ---
