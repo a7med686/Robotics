@@ -7,25 +7,24 @@ It streams live video and can be controlled remotely from any browser.
 ---
 
 ## ✨ Features
-• Stream live via Wi-Fi
-•  Web-based motor control interface (Forward, Backward, Left, Right,Stop)
-• Built with ESP32-CAM (low-cost, compact module)
-•  Uses L298N motor driver
-• Control and view from any device on the same network
+- 📡 Live video streaming over Wi-Fi
+- 🎮 Web-based motor control (Forward, Backward, Left, Right, Stop)
+- 📱 Works on phone or PC browser
+- 💰 Low-cost ESP32-CAM module
 
 ---
 
-# 🧰 Components Required
+## 🧰 Components Required
 
-| Component | Quantity|
-|-----------|---------|
-| ESP32-CAM (AI Thinker)         |  1  |
-| FTDI USB-to-Serial Adapter     |  1  |
-| L298N Motor Driver             |  1  |
-| DC Motors + Wheels             |  4  | 
-| Chassis + Battery Holder       |  1  |
-| 18650 Battery / 7.4V LiPo      |  1  |
-| Jumper Wires                   | Several |
+| Component | Quantity |
+|----------|--------|
+| ESP32-CAM (AI Thinker) | 1 |
+| FTDI USB-to-Serial Adapter | 1 |
+| L298N Motor Driver | 1 |
+| DC Motors + Wheels | 4 |
+| Chassis + Battery Holder | 1 |
+| 18650 Battery / 7.4V LiPo | 1 |
+| Jumper Wires | Several |
 
 ---
 
@@ -39,7 +38,7 @@ It streams live video and can be controlled remotely from any browser.
 | GND | GND |
 | U0R | TX |
 | U0T | RX |
-|100 ↔ GND|
+| GPIO0 | GND |
 
 ---
 
@@ -51,32 +50,29 @@ It streams live video and can be controlled remotely from any browser.
 | GPIO13 | IN2 |
 | GPIO15 | IN3 |
 | GPIO14 | IN4 |
-|   5V   | 5 V |
-|   GND  | GND |
 
 ---
 
 ### Power
-
-• ESP32-CAM powered via FTDI (for programming) and 5V regulator or battery
-• Motor Driver powered by separate battery (6–12V)
+- ESP32 powered by 5V
+- Motor Driver powered by 6–12V battery
+- Shared GND required
 
 ---
 
 ## ⚙️ Software Setup
 
 ### Install ESP32 Board
+Add this URL in Arduino IDE:
 
-1. Go to File > Preferences → Paste these URLs in “Additional Board URLs”:
-  • https://dl.espressif.com/dl/package_esp32_index.json
-  • https://raw.githubusercontent.com/espressif/arduino- esp32/gh-pages/package_esp32_index.json
-2. Go to Tools > Board > Board Manager → Search “ESP32” → Install
+https://dl.espressif.com/dl/package_esp32_index.json
+
+Then install ESP32 from Board Manager.
 
 ### Board Settings
-
-• Board: AI Thinker ESP32-CAM
-• Partition Scheme: Default 4MB with SPIFFS
-• PSRAM: Enabled (if available)
+- Board: AI Thinker ESP32-CAM
+- Partition Scheme: Default
+- PSRAM: Enabled
 
 ---
 
@@ -92,28 +88,41 @@ It streams live video and can be controlled remotely from any browser.
 ---
 
 ## 🌐 How It Works
-• The ESP32-CAM hosts a video stream at:
-➢ http:// 10.167.98.199:81/stream
-• It also hosts a control UI at:
-➢ http://< 10.167.98.199> with motor buttons
-• Clicking the buttons sends HTTP requests (/control?move=F, etc.)
-• ESP32 processes these to control motors via GPIO 12–15
-
+- ESP32 hosts:
+  - Stream → http://IP:81/stream
+  - Control → http://IP
+- Browser buttons send commands to ESP32
+- ESP32 controls motors using GPIO pins
 
 ---
 
 ## 📱 Usage
-
 1. Upload code using FTDI
-2. Power the car (ESP32 and motor driver)
-3. Open Serial Monitor at 115200 → Get IP
-4. Open browser on phone or PC:
-   • Stream page: http://< 10.167.98.199>:81/stream
-   • Control page: http://< 10.167.98.199>
-Add screenshots of:
-   • Serial monitor showing IP
-   • Web UI on phone
-   • Camera stream output
+2. Power the car
+3. Open Serial Monitor (115200)
+4. Get IP address
+5. Open browser
 
 ---
 
+## ⚠️ Troubleshooting
+
+| Problem | Fix |
+|--------|-----|
+| Motors not stopping | Check wiring |
+| Motors not moving | Check ENA/ENB |
+| ESP restarts | Fix power |
+| Camera error | Change format |
+
+---
+
+## 🚀 Improvements
+- Add PWM speed control
+- Add ultrasonic sensor
+- Voice control
+- Save images to SD card
+
+---
+
+## 🏁 Conclusion
+This project combines robotics, streaming, and IoT using ESP32-CAM.
