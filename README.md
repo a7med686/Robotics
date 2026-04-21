@@ -69,8 +69,8 @@ computer browser — no apps required!
 ### Install ESP32 Board
 1. Install ESP32 Board Support in Arduino IDE
 - Go to File > Preferences → Paste these URLs in “Additional Board URLs”:
- https://dl.espressif.com/dl/package_esp32_index.json
- https://raw.githubusercontent.com/espressif/arduino- esp32/gh-pages/package_esp32_index.json
+ - https://dl.espressif.com/dl/package_esp32_index.json
+- https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 
 ### Board Settings
 - Board: AI Thinker ESP32-CAM
