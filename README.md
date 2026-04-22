@@ -153,7 +153,16 @@ const char* password = "YOUR_PASSWORD";
 - Turn this into a security patrol robot
 
 ---
+## 🎬 Video
+- Final demonstration of the project, highlighting the fully implemented features and functionality.
+<details>
+  <summary>🎬 Click to watch video</summary>
 
+  https://github.com/user-attachments/assets/b5467cc4-5b57-4443-bf19-dcb390ad6145
+
+</details>
+
+---
 ## 🏁 Conclusion
 Conclusion
 This surveillance car is a fun and powerful IoT project that combines video
